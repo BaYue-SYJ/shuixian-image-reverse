@@ -1,0 +1,34 @@
+<svg viewBox="0 0 680 362" width="680" height="362" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif">
+<title>城市名片海报的版式分区骨架</title>
+<desc>按纵向比例拆出的七个版式区域：顶栏、标题组、巨型字、数据浮标、天际线、主体、底栏。</desc>
+<rect width="680" height="362" fill="#FFFFFF"/>
+<rect x="40" y="30" width="250" height="312" fill="#FCFBF8" stroke="#B4B2A9" stroke-width="0.5"/>
+<rect x="40" y="170" width="250" height="63" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<rect x="40" y="233" width="250" height="93" fill="#F3D2A3" stroke="#BA7517" stroke-width="0.5"/>
+<rect x="40" y="30" width="250" height="14" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<rect x="40" y="44" width="250" height="36" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<rect x="40" y="326" width="250" height="16" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<rect x="48" y="83" width="234" height="75" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="3 3"/>
+<rect x="44" y="167" width="58" height="31" fill="#FFFFFF" stroke="#888780" stroke-width="0.5"/>
+<rect x="228" y="167" width="58" height="31" fill="#FFFFFF" stroke="#888780" stroke-width="0.5"/>
+<g stroke="#888780" stroke-width="0.5">
+<line x1="48" y1="37" x2="86" y2="37"/><line x1="246" y1="37" x2="282" y2="37"/>
+<line x1="150" y1="52" x2="180" y2="52" stroke-width="1.5"/><line x1="143" y1="62" x2="187" y2="62" stroke-width="1"/><line x1="123" y1="72" x2="207" y2="72"/>
+<line x1="49" y1="174" x2="80" y2="174"/><line x1="49" y1="182" x2="72" y2="182"/><line x1="49" y1="190" x2="86" y2="190"/>
+<line x1="233" y1="174" x2="264" y2="174"/><line x1="233" y1="182" x2="256" y2="182"/><line x1="233" y1="190" x2="270" y2="190"/>
+<line x1="48" y1="334" x2="72" y2="334"/><line x1="78" y1="334" x2="102" y2="334"/><line x1="108" y1="334" x2="132" y2="334"/><line x1="250" y1="334" x2="282" y2="334"/>
+</g>
+<g stroke="#D3D1C7" stroke-width="0.5" stroke-dasharray="2 2">
+<line x1="292" y1="37" x2="314" y2="37"/><line x1="292" y1="62" x2="314" y2="62"/><line x1="292" y1="121" x2="314" y2="121"/>
+<line x1="292" y1="182" x2="314" y2="182"/><line x1="292" y1="206" x2="314" y2="206"/><line x1="292" y1="280" x2="314" y2="280"/><line x1="292" y1="334" x2="314" y2="334"/>
+</g>
+<g font-size="12" fill="#444441">
+<text x="320" y="41" dominant-baseline="central">顶栏 · 城市名 + 经纬度</text>
+<text x="320" y="62" dominant-baseline="central">标题组 · 三行字距递降</text>
+<text x="320" y="121" dominant-baseline="central">巨型字 · 撑满九成画宽，压在景后</text>
+<text x="320" y="182" dominant-baseline="central">浮标 · 左山右水，成对出现</text>
+<text x="320" y="206" dominant-baseline="central">天际线 · 现代地标当背景板</text>
+<text x="320" y="280" dominant-baseline="central">主体 · 紫禁城占下半幅</text>
+<text x="320" y="334" dominant-baseline="central">底栏 · 三格数据 + 落款</text>
+</g>
+</svg>
