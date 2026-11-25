@@ -1,0 +1,28 @@
+{
+  "name": "@bayue-syj/shuixian-image-reverse",
+  "version": "1.0.0",
+  "description": "Image to prompt reverse engineering skill: reproduce a reference, borrow its style or layout, and revise from the generated result.",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "workbuddy",
+    "codex",
+    "skill",
+    "prompt",
+    "image",
+    "reverse-engineering"
+  ],
+  "files": [
+    "skill/shuixian-image-reverse/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaYue-SYJ/shuixian-image-reverse.git"
+  },
+  "homepage": "https://github.com/BaYue-SYJ/shuixian-image-reverse",
+  "bugs": {
+    "url": "https://github.com/BaYue-SYJ/shuixian-image-reverse/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

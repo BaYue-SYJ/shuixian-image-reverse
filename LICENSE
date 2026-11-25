@@ -1,0 +1,77 @@
+# 图片反推技能 · 使用与署名说明
+
+**Attribution Required License · v1.0（2026-11-25）**
+
+本仓库包含一个 WorkBuddy / Codex 技能（`skill/shuixian-image-reverse/`）、
+拆解方法与说明文档，以及用于演示的参考图与生成图。
+使用本项目的任何部分，即视为你已阅读并同意以下约定。
+
+---
+
+## 一、可以自由使用
+
+- 学习、克隆、fork、二次开发
+- 安装、修改、在自己的项目或工作流里使用这个技能
+- 转载、引用，用于个人学习与非商业分享
+- 基于本技能做自己的版本 —— 改流程、改文案、加语言、换领域都可以
+
+## 二、必须遵守
+
+1. **保留署名**：在你项目的主页、README 或站点页脚的显著位置注明来源，并附上原仓库链接。
+   可以直接使用这一句：
+
+   > 本项目基于「图片反推提示词 · 拆解与复现」（https://github.com/BaYue-SYJ/shuixian-image-reverse）二次开发
+
+2. **衍生项目必须写清来源**：任何 fork、改写、二次开发或搬运的版本，都必须在显著位置说明它来自本项目，
+   并保留原仓库链接；不得删除、遮蔽、弱化原署名，也不得对外宣称原创。
+
+3. **不得暗示官方背书**：未经许可，不得使用本项目名称、作者名义为自己的版本做推广或背书。
+
+## 三、商业用途需先获得授权
+
+商业用途 —— 包括打包售卖、付费课程或社群、用于引流变现的商业站点、企业内训等 ——
+**需先联系作者取得书面授权**，包括但不限于去除署名后使用的情形。
+
+- 联系方式：公众号「水仙的AI提示词」后台留言
+- 或在本仓库提交 Issue：https://github.com/BaYue-SYJ/shuixian-image-reverse/issues
+
+## 四、关于演示图与第三方内容
+
+`assets/` 下的图片分两类，权利状况不同：
+
+- **参考图**（`reference.jpg`）：来自公开网络的既有作品，仅用于方法演示，
+  **版权归各自原作者**，本项目不对其主张任何权利。
+- **生成图**（`generated-*.png`）：由 AI 图像模型产出，**不是摄影作品**，
+  也不代表任何品牌、人物或机构的官方视觉。
+
+演示图中可能出现的商标字形（如 `grand theft auto` 字标）、游戏角色形象与真人肖像，
+权利归各自所有者。本仓库仅作版式与方法的演示，**不构成任何授权**，也不对其可用性作担保。
+如需商业使用，请自行确认权利来源。
+
+## 五、署名信息
+
+| 项 | 内容 |
+| --- | --- |
+| 项目 | 图片反推提示词 · 拆解与复现 |
+| 作者 | 水仙 |
+| 仓库 | https://github.com/BaYue-SYJ/shuixian-image-reverse |
+| 站点 | https://prompt.qqsrc.com/ |
+| 公众号 | 水仙的AI提示词 |
+
+---
+
+## English Summary
+
+You are free to study, fork, install, modify, and build upon this project for **non-commercial** purposes.
+
+**Attribution is required.** Any fork or derivative work must clearly credit the original project and link back to
+<https://github.com/BaYue-SYJ/shuixian-image-reverse>. You may not remove, obscure, or weaken the original
+attribution, and you may not present the work as your own.
+
+**Commercial use requires prior written permission** from the author. Contact via the WeChat Official Account
+「水仙的AI提示词」or by opening an issue in this repository.
+
+Reference images under `assets/` remain the property of their respective original authors; this project only uses
+them to demonstrate the method and makes no claim over that content. Generated images are AI model outputs, not
+photographs, and do not represent any brand, person or institution. Trademarks and likenesses appearing in those
+images belong to their owners and are not licensed by this repository.

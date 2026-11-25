@@ -384,6 +384,8 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 .
 ├── README.md                  # 本文件（简体中文）
 ├── README.en.md               # English
+├── LICENSE                    # 署名使用协议
+├── package.json               # npm 清单，只打包 skill/
 ├── skill/
 │   └── shuixian-image-reverse/    # 技能本体，可直接复制到 .workbuddy/skills/
 │       ├── SKILL.md
@@ -397,6 +399,9 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 └── docs/
     ├── 01-skill-list.png        # 已安装技能列表（启停开关）
     ├── 02-skill-detail.png      # 技能详情页，概述即 SKILL.md
+    ├── reward-qr.jpg            # 赞赏码
+    ├── wechat-qr.jpg            # 微信
+    ├── wechat-mp-qr.jpg         # 公众号
     └── diagrams/                # 拆解结构图（SVG，可无损缩放）
         ├── city-zones.svg
         ├── collage-layers.svg
@@ -405,11 +410,35 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 
 ---
 
-## 图片来源说明
+## 许可
 
-- 参考图均来自公开网络，仅用于方法演示；如权利人提出异议，会立即移除。
-- 生成图由 AI 图像模型产出，**不是摄影作品**，也不代表任何真实品牌、人物或机构的官方视觉。
-- 所有裁剪、水印处理都在本地完成，不改变原始素材。
+采用**署名使用**协议（Attribution Required License v1.0）：可以自由学习、fork、安装使用、二次开发，也可用于非商业转载；但请**保留出处并链接回本仓库**，衍生项目必须写清来源，商业用途需先联系作者取得书面授权。全文见 [LICENSE](LICENSE)。
+
+演示图分两类，权利状况不同：
+
+| 类型 | 文件 | 权利 |
+|---|---|---|
+| 参考图 | `assets/*/reference.jpg` | 来自公开网络，**版权归原作者**，本项目仅作方法演示，不主张权利 |
+| 生成图 | `assets/*/generated-*.png` | AI 模型产出，**不是摄影作品**，不代表任何品牌、人物或机构的官方视觉 |
+
+图中出现的商标字形、游戏角色形象与真人肖像，权利归各自所有者，本仓库**不构成任何授权**。
+
+## 联系
+
+- 站点：<https://prompt.qqsrc.com/>
+- 公众号：**水仙的AI提示词** —— 会经常写一些 AI 工具与提示词相关的东西
+- 微信：**Kas2026** —— 公益免费交流群，不收取任何费用，喜欢技术的可以一起交流
+- 问题、纠错、建议：欢迎开 [Issue](https://github.com/BaYue-SYJ/shuixian-image-reverse/issues)
+
+| 赞赏码 | 微信 | 公众号 |
+|:---:|:---:|:---:|
+| <img src="docs/reward-qr.jpg" width="180" alt="赞赏码"> | <img src="docs/wechat-qr.jpg" width="180" alt="微信"> | <img src="docs/wechat-mp-qr.jpg" width="180" alt="公众号"> |
+
+## 致谢
+
+| 社区 | 说明 |
+| --- | --- |
+| [Linux.Do](https://linux.do) | 与社区分享、讨论和跟踪发展 —— 认可 LINUX DO 社区 |
 
 ---
 

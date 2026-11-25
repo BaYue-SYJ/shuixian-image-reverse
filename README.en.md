@@ -361,6 +361,8 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 .
 ├── README.md                  # 简体中文
 ├── README.en.md               # this file
+├── LICENSE                    # attribution-required licence
+├── package.json               # npm manifest, ships skill/ only
 ├── skill/
 │   └── shuixian-image-reverse/    # the skill itself, copy into .workbuddy/skills/
 │       ├── SKILL.md
@@ -374,6 +376,9 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 └── docs/
     ├── 01-skill-list.png        # installed skills list, with the toggle
     ├── 02-skill-detail.png      # skill detail, overview = SKILL.md
+    ├── reward-qr.jpg            # tip jar
+    ├── wechat-qr.jpg            # WeChat
+    ├── wechat-mp-qr.jpg         # WeChat Official Account
     └── diagrams/                # breakdown diagrams (SVG, lossless scaling)
         ├── city-zones.svg
         ├── collage-layers.svg
@@ -382,11 +387,35 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 
 ---
 
-## About the images
+## Licence
 
-- Reference images come from public sources and are used for method demonstration only; they will be removed on request by the rights holder.
-- Generated images are produced by AI models. They are **not photographs** and do not represent any brand, person or institution.
-- All cropping and watermark removal was done locally without altering the source files.
+Released under an **Attribution Required License v1.0**: you may study, fork, install, modify and build on it, and repost it non-commercially — provided you **keep the credit and link back to this repository**. Derivative works must state their origin, and commercial use requires written permission from the author. Full text in [LICENSE](LICENSE).
+
+Two kinds of images live in `assets/`, with different rights:
+
+| Kind | Files | Rights |
+|---|---|---|
+| Reference | `assets/*/reference.jpg` | Taken from public sources; **copyright stays with the original authors**. Used here to demonstrate the method only. |
+| Generated | `assets/*/generated-*.png` | AI model outputs; **not photographs**, and not official visuals of any brand, person or institution. |
+
+Trademarks, character designs and likenesses appearing in those images belong to their owners. This repository grants **no rights** over them.
+
+## Contact
+
+- Site: <https://prompt.qqsrc.com/>
+- WeChat Official Account: **水仙的AI提示词** — notes on AI tools and prompt design
+- WeChat: **Kas2026** — free community group, no fees, for people who like tinkering
+- Questions, corrections, suggestions: open an [issue](https://github.com/BaYue-SYJ/shuixian-image-reverse/issues)
+
+| Tip jar | WeChat | Official Account |
+|:---:|:---:|:---:|
+| <img src="docs/reward-qr.jpg" width="180" alt="Tip jar"> | <img src="docs/wechat-qr.jpg" width="180" alt="WeChat"> | <img src="docs/wechat-mp-qr.jpg" width="180" alt="Official Account"> |
+
+## Acknowledgements
+
+| Community | Note |
+| --- | --- |
+| [Linux.Do](https://linux.do) | For sharing, discussing and following the project — with thanks to the LINUX DO community |
 
 ---
 
