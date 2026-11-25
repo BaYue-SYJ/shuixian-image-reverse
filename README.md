@@ -29,6 +29,14 @@
 
 ### 安装
 
+**方式一 · 技能市场**
+
+打开 WorkBuddy 左侧栏「专家·技能·连接器」→「技能」页，搜索「水仙的图片反推」，点卡片右侧的「+」即可。这页默认只展示未安装的技能，装好之后卡片会移到上方「已安装」里。
+
+<img src="docs/03-skill-hub.png" width="720" alt="SkillHub 中的「水仙的图片反推 skill」">
+
+**方式二 · 从仓库复制**
+
 技能本体就在本仓库里：`skill/shuixian-image-reverse/`。整个目录丢进技能文件夹即可，不需要构建、没有依赖。
 
 ```bash
@@ -399,6 +407,7 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 └── docs/
     ├── 01-skill-list.png        # 已安装技能列表（启停开关）
     ├── 02-skill-detail.png      # 技能详情页，概述即 SKILL.md
+    ├── 03-skill-hub.png         # 技能市场里的上架卡片
     ├── reward-qr.jpg            # 赞赏码
     ├── wechat-qr.jpg            # 微信
     ├── wechat-mp-qr.jpg         # 公众号

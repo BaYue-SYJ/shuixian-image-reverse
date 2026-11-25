@@ -28,6 +28,14 @@ The skill itself also ships here: `skill/shuixian-image-reverse/`, installable a
 
 ### Installation
 
+**Option 1 · From the skill marketplace**
+
+Open *Experts · Skills · Connectors* in the left sidebar, go to the skills page and search for 「水仙的图片反推」. Click the **+** on the right of the card. The page lists uninstalled skills only, so once installed the card moves up into the installed group.
+
+<img src="docs/03-skill-hub.png" width="720" alt="shuixian-image-reverse in the SkillHub">
+
+**Option 2 · Copy from this repository**
+
 The skill itself ships in this repository: `skill/shuixian-image-reverse/`. Drop that folder into your skills directory — no build step, no dependencies.
 
 ```bash
@@ -376,6 +384,7 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 └── docs/
     ├── 01-skill-list.png        # installed skills list, with the toggle
     ├── 02-skill-detail.png      # skill detail, overview = SKILL.md
+    ├── 03-skill-hub.png         # the listing card in the marketplace
     ├── reward-qr.jpg            # tip jar
     ├── wechat-qr.jpg            # WeChat
     ├── wechat-mp-qr.jpg         # WeChat Official Account
