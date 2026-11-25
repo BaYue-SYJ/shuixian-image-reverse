@@ -20,6 +20,8 @@ reference  →  breakdown (layout / layers / type / sampled colour)  →  prompt
 
 The breakdown is not adjective-stacking. Every ratio, hex value and luminance figure below was **measured** from the source image.
 
+The skill itself also ships here: `skill/shuixian-image-reverse/`, installable as-is — see the next section.
+
 ---
 
 ## Using the skill inside WorkBuddy
@@ -27,6 +29,36 @@ The breakdown is not adjective-stacking. Every ratio, hex value and luminance fi
 <img src="docs/01-workbuddy-window.png" width="820" alt="WorkBuddy workspace: skill entry and task list on the left, chat on the right">
 
 <sub>The WorkBuddy workspace. *Experts · Skills · Connectors* on the left is where the skill is enabled; the chat pane on the right is where the reference image goes.</sub>
+
+### Installation
+
+The skill itself ships in this repository: `skill/shuixian-image-reverse/`. Drop that folder into your skills directory — no build step, no dependencies.
+
+```bash
+# macOS / Linux — user level, available in every project
+git clone https://github.com/BaYue-SYJ/shuixian-image-reverse.git
+mkdir -p ~/.workbuddy/skills
+cp -r shuixian-image-reverse/skill/shuixian-image-reverse ~/.workbuddy/skills/
+```
+
+```powershell
+# Windows — user level
+git clone https://github.com/BaYue-SYJ/shuixian-image-reverse.git
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.workbuddy\skills" | Out-Null
+Copy-Item -Recurse .\shuixian-image-reverse\skill\shuixian-image-reverse "$env:USERPROFILE\.workbuddy\skills\"
+```
+
+For a single project, use `<project>/.workbuddy/skills/` instead. Takes effect after the session restarts.
+
+| File | What it does |
+|---|---|
+| `SKILL.md` | Main flow: intent routing → evidence selection → position quantification → sentence order → self-check → revision from output |
+| `references/analysis-framework.md` | 12-axis general image analysis |
+| `references/category-guides.md` | Per-category notes for 17 subject and medium types |
+| `references/illustration-style.md` | Illustration style: decoupling content from style, style fingerprints |
+| `references/tool-targets.md` | Target-tool adaptation: ratio syntax, negative-prompt tiers, language and length |
+| `agents/openai.yaml` | Display name and default prompt used inside WorkBuddy / Codex |
+
 
 | Step | Action |
 |---|---|
@@ -308,6 +340,11 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 .
 ├── README.md                  # 简体中文
 ├── README.en.md               # this file
+├── skill/
+│   └── shuixian-image-reverse/    # the skill itself, copy into .workbuddy/skills/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       └── references/            # four reference modules
 ├── assets/
 │   ├── 01-gta6/               # game poster, new subject
 │   ├── 02-city/               # city identity, new city

@@ -1,0 +1,4 @@
+interface:
+  display_name: "水仙图片反推"
+  short_description: "从参考图复现整图、借用画风或构图，按成图修词，并按目标工具适配输出"
+  default_prompt: "用 $shuixian-image-reverse 从这张参考图反推一份可直接使用的生图提示词，位置与占比用画宽画高的分数写清楚。"

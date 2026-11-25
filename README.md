@@ -14,7 +14,6 @@
 这不是一堆"好看的提示词"，而是一套**可拆解、可复用、可验证**的方法：先判断视觉结构由哪几层组成，再把结构翻译成生图工具能执行的句子，最后用生成结果反查哪句话没起作用。
 
 仓库里的四组图都遵循同一个流程：
-
 ```
 参考图  →  拆解（版式 / 图层 / 字体 / 色彩采样）  →  反推提示词（中英双语）
         →  生成  →  对照参考图找偏差  →  修词  →  成品
@@ -22,13 +21,47 @@
 
 拆解不靠形容词堆砌。每个案例里的分区比例、色值、明度分布都是从原图**实测**出来的，不是估的。
 
+技能本体也在这个仓库里：`skill/shuixian-image-reverse/`，可直接安装使用，见下一节。
+
 ---
 
 ## 在 WorkBuddy 里怎么用这个 Skill
 
-![WorkBuddy 工作区：左侧为技能入口与任务列表，右侧为对话区](docs/01-workbuddy-window.png)
+<img src="docs/01-workbuddy-window.png" width="820" alt="WorkBuddy 工作区：左侧为技能入口与任务列表，右侧为对话区">
 
 <sub>WorkBuddy 工作区。左侧「专家·技能·连接器」是启用技能的位置，右侧对话区直接拖入参考图即可。</sub>
+
+### 安装
+
+技能本体就在本仓库里：`skill/shuixian-image-reverse/`。整个目录丢进技能文件夹即可，不需要构建、没有依赖。
+
+```bash
+# macOS / Linux —— 用户级，所有项目可用
+git clone https://github.com/BaYue-SYJ/shuixian-image-reverse.git
+mkdir -p ~/.workbuddy/skills
+cp -r shuixian-image-reverse/skill/shuixian-image-reverse ~/.workbuddy/skills/
+```
+
+```powershell
+# Windows —— 用户级
+git clone https://github.com/BaYue-SYJ/shuixian-image-reverse.git
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.workbuddy\skills" | Out-Null
+Copy-Item -Recurse .\shuixian-image-reverse\skill\shuixian-image-reverse "$env:USERPROFILE\.workbuddy\skills\"
+```
+
+只想在单个项目里用，就放到 `<项目>/.workbuddy/skills/`，效果相同。重启会话后生效。
+
+**技能构成**
+
+| 文件 | 作用 |
+|---|---|
+| `SKILL.md` | 主流程：意图判断 → 证据选取 → 量化位置 → 六句序写作 → 交付自查 → 按成图修词 |
+| `references/analysis-framework.md` | 12 维通用图片分析框架 |
+| `references/category-guides.md` | 17 类主体与媒介的专项拆解要点 |
+| `references/illustration-style.md` | 插画画风专项：内容与画风解耦、画风指纹 |
+| `references/tool-targets.md` | 目标工具适配：比例写法、负面词三分法、语言与篇幅 |
+| `agents/openai.yaml` | 在 WorkBuddy / Codex 中显示的技能名与默认提示语 |
+
 
 **四步**
 
@@ -332,6 +365,11 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 .
 ├── README.md                  # 本文件（简体中文）
 ├── README.en.md               # English
+├── skill/
+│   └── shuixian-image-reverse/    # 技能本体，可直接复制到 .workbuddy/skills/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       └── references/            # 4 个专项参考文件
 ├── assets/
 │   ├── 01-gta6/               # 游戏海报换主体
 │   ├── 02-city/               # 城市名片换城市
