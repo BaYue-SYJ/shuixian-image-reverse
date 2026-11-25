@@ -27,10 +27,6 @@
 
 ## 在 WorkBuddy 里怎么用这个 Skill
 
-<img src="docs/01-workbuddy-window.png" width="820" alt="WorkBuddy 工作区：左侧为技能入口与任务列表，右侧为对话区">
-
-<sub>WorkBuddy 工作区。左侧「专家·技能·连接器」是启用技能的位置，右侧对话区直接拖入参考图即可。</sub>
-
 ### 安装
 
 技能本体就在本仓库里：`skill/shuixian-image-reverse/`。整个目录丢进技能文件夹即可，不需要构建、没有依赖。
@@ -63,14 +59,37 @@ Copy-Item -Recurse .\shuixian-image-reverse\skill\shuixian-image-reverse "$env:U
 | `agents/openai.yaml` | 在 WorkBuddy / Codex 中显示的技能名与默认提示语 |
 
 
-**四步**
+### 第一步 · 确认技能已启用
 
-| 步骤 | 操作                                                        |
-| -- | --------------------------------------------------------- |
-| 1  | 输入框里挂载技能：`@skill:shuixian-image-reverse`，或在「专家·技能·连接器」里启用 |
-| 2  | 把参考图拖进对话（或直接粘贴）                                           |
-| 3  | 一句话说清意图：`反推这张图` / `用这个风格画××` / `沿用这张海报的布局`                |
-| 4  | 拿到中英双语提示词，去生图；把生成结果贴回来，技能会定位偏差并给修订词                       |
+左栏点「专家·技能·连接器」，进入「已安装技能」。在「用户自定义」分区里找到 `shuixian-image-reverse`，确认卡片右侧的开关是开启状态。卡片上那句灰色描述就是技能的 `description`，用来快速判断它是不是你要的那个。
+
+<img src="docs/01-skill-list.png" width="820" alt="已安装技能列表中的 shuixian-image-reverse，开关处于开启状态">
+
+<sub>WorkBuddy 5.11.3 的「已安装技能」页面。分组名称与计数（如「用户自定义 (52)」）随各自安装情况变化，不必对数字。</sub>
+
+列表里没有它，说明还没装好：回到上一节，把 `skill/shuixian-image-reverse/` 放进技能目录后重启会话。
+
+### 第二步 · 点开卡片核对内容
+
+点卡片进入详情页。「概述」里显示的就是 `SKILL.md` 全文——名称、描述，以及「确定要复现什么」那张意图对照表都在里面。装完先对一眼，确认读到的是当前版本，而不是旧的缓存。
+
+<img src="docs/02-skill-detail.png" width="820" alt="技能详情页：概述即 SKILL.md 全文，右上角为 去试试 / 分享 / ⋯">
+
+<sub>详情页右上角三个入口：「去试试」「分享」「⋯」。</sub>
+
+### 第三步 · 进对话，给图和意图
+
+点「去试试」开始试用；已经在对话里的话，用 `@skill:shuixian-image-reverse` 挂载。然后把参考图拖进来，用一句话说清要做什么——这一句决定走哪条分支。
+
+| 你说什么 | 技能走哪条分支 |
+|---|---|
+| `反推这张图` | 复现整图 |
+| `用这个风格画一间早餐店` | 借画风 |
+| `沿用这张海报的布局，换成海贝` | 借构图 |
+
+### 第四步 · 拿提示词去生图，再把结果贴回来
+
+输出是中英双语正向词，可直接复制去生图。生成之后把成图和参考图一起贴回对话，技能会定位最影响结果的一两处偏差，给出可直接重用的修订词，而不是把整段重写一遍。
 
 **为什么要先说意图**：开头句式决定模型是"照抄一张图"还是"创作一张图"。名词句（`3:2 横幅的咖啡馆实拍。`）会让模型复现，祈使句（`设计一张……主题的海报。`）会让模型创作。混用是这类提示词最常见的失效原因。
 
@@ -376,8 +395,9 @@ No black anywhere in the image, no saturated colour other than the gold, no peop
 │   ├── 03-collage/            # 撕纸拼贴换人物
 │   └── 04-model/              # 白模建筑换建筑
 └── docs/
-    ├── 01-workbuddy-window.png
-    └── diagrams/              # 拆解结构图（SVG，可无损缩放）
+    ├── 01-skill-list.png        # 已安装技能列表（启停开关）
+    ├── 02-skill-detail.png      # 技能详情页，概述即 SKILL.md
+    └── diagrams/                # 拆解结构图（SVG，可无损缩放）
         ├── city-zones.svg
         ├── collage-layers.svg
         └── model-perspective.svg

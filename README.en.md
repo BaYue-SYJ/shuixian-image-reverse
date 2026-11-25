@@ -26,10 +26,6 @@ The skill itself also ships here: `skill/shuixian-image-reverse/`, installable a
 
 ## Using the skill inside WorkBuddy
 
-<img src="docs/01-workbuddy-window.png" width="820" alt="WorkBuddy workspace: skill entry and task list on the left, chat on the right">
-
-<sub>The WorkBuddy workspace. *Experts · Skills · Connectors* on the left is where the skill is enabled; the chat pane on the right is where the reference image goes.</sub>
-
 ### Installation
 
 The skill itself ships in this repository: `skill/shuixian-image-reverse/`. Drop that folder into your skills directory — no build step, no dependencies.
@@ -60,12 +56,37 @@ For a single project, use `<project>/.workbuddy/skills/` instead. Takes effect a
 | `agents/openai.yaml` | Display name and default prompt used inside WorkBuddy / Codex |
 
 
-| Step | Action |
+### Step 1 · Make sure the skill is enabled
+
+Open *Experts · Skills · Connectors* in the left sidebar and go to installed skills. Find `shuixian-image-reverse` under the user-defined group and check that the toggle on the right of the card is on. The grey line on the card is the skill's `description` — the quickest way to tell whether this is the one you want.
+
+<img src="docs/01-skill-list.png" width="820" alt="shuixian-image-reverse in the installed skills list, toggle on">
+
+<sub>The installed-skills page in WorkBuddy 5.11.3. Group names and counts (here "user-defined (52)") vary between installations — do not match them against your own.</sub>
+
+If it is not in the list, it is not installed yet: go back one section, copy `skill/shuixian-image-reverse/` into your skills directory and restart the session.
+
+### Step 2 · Open the card and check the content
+
+Clicking the card opens the detail view. The overview panel shows the full `SKILL.md` — name, description, and the intent table under "what to reproduce". Glance at it after installing to confirm you are reading the current version rather than a stale cache.
+
+<img src="docs/02-skill-detail.png" width="820" alt="Skill detail page: the overview is the full SKILL.md, with Try it / Share / ⋯ at the top right">
+
+<sub>Three entries at the top right: *Try it*, *Share*, *⋯*.</sub>
+
+### Step 3 · Open a chat, give the image and the intent
+
+Click *Try it* to start a trial; inside an existing chat, attach the skill with `@skill:shuixian-image-reverse`. Drop the reference image in and say what you want in one line — that line decides which branch runs.
+
+| What you say | Which branch runs |
 |---|---|
-| 1 | Attach the skill: `@skill:shuixian-image-reverse`, or enable it under *Experts · Skills · Connectors* |
-| 2 | Drop the reference image into the chat |
-| 3 | State the intent in one line: `reverse this image` / `paint X in this style` / `reuse this poster's layout` |
-| 4 | Take the bilingual prompt, generate, then paste the result back to get targeted revisions |
+| `reverse this image` | reproduce the whole image |
+| `paint a breakfast diner in this style` | borrow the style |
+| `reuse this poster's layout, make it seashells` | borrow the layout |
+
+### Step 4 · Generate, then paste the result back
+
+The output is a pair of positive prompts, ZH and EN, ready to copy. After generating, drop the result and the reference back into the chat: the skill locates the one or two deviations that matter and returns reusable revisions rather than rewriting the whole block.
 
 **Why intent comes first:** the opening sentence decides whether the model *copies* or *creates*. A noun phrase (`A 3:2 photo of a warm café.`) reproduces; an imperative (`Design a vertical screen-print poster about the last tram.`) creates. Mixing them is the most common failure mode.
 
@@ -351,8 +372,9 @@ Always zoom into the corners before cutting. Locating a watermark by brightness 
 │   ├── 03-collage/            # torn-paper collage, new subject
 │   └── 04-model/              # white model, new building
 └── docs/
-    ├── 01-workbuddy-window.png
-    └── diagrams/              # breakdown diagrams (SVG, lossless scaling)
+    ├── 01-skill-list.png        # installed skills list, with the toggle
+    ├── 02-skill-detail.png      # skill detail, overview = SKILL.md
+    └── diagrams/                # breakdown diagrams (SVG, lossless scaling)
         ├── city-zones.svg
         ├── collage-layers.svg
         └── model-perspective.svg
